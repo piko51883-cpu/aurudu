@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Lankan New Year Games - 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Sinhala:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="ui-layer">
+      <!-- Loading Screen -->
+      <div id="loader" class="screen">
+        <div class="loader-content">
+          <div class="spinner"></div>
+          <h1>Loading Avurudu Experience...</h1>
+        </div>
+      </div>
+
+      <!-- Main Menu -->
+      <div id="main-menu" class="screen hidden">
+        <div class="menu-content">
+          <h1 class="sinhala-title">සුබ අලුත් අවුරුද්දක් වේවා!</h1>
+          <p class="subtitle">Sri Lankan Traditional Games Portal</p>
+          <div class="button-group">
+            <button id="play-btn" class="primary-btn">Play Games</button>
+            <button id="multiplayer-btn" class="secondary-btn">Play with Friends</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Selection -->
+      <div id="game-selection" class="screen hidden">
+        <div class="selection-grid">
+          <div class="game-card" data-game="pancha">
+            <div class="card-image pancha-bg"></div>
+            <h3>පංච දැමීම (Pancha)</h3>
+          </div>
+          <div class="game-card" data-game="kanamutti">
+            <div class="card-image kanamutti-bg"></div>
+            <h3>කණමුට්ටි බිඳීම (Pot Breaking)</h3>
+          </div>
+          <div class="game-card" data-game="gudu">
+            <div class="card-image gudu-bg"></div>
+            <h3>ගුඩු කෙළිය (Gudu)</h3>
+          </div>
+          <div class="game-card" data-game="chakgudu">
+            <div class="card-image chakgudu-bg"></div>
+            <h3>චක්ගුඩු (Chakgudu)</h3>
+          </div>
+        </div>
+        <button id="back-to-menu" class="back-btn">Back</button>
+      </div>
+
+      <!-- Lobby -->
+      <div id="lobby" class="screen hidden">
+        <div class="lobby-content">
+          <h2>Multiplayer Lobby</h2>
+          <div class="room-info">
+             <p>Room ID: <span id="room-id-display">-----</span></p>
+             <button id="copy-room-id">Copy Link</button>
+          </div>
+          <div id="player-list">
+            <!-- Players will appear here -->
+          </div>
+          <button id="start-game" class="primary-btn" disabled>Start Game</button>
+          <button id="leave-lobby" class="back-btn">Leave</button>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
